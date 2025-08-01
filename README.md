@@ -1,13 +1,11 @@
 ## 🎯 Objetivos
-
- - **Principais:**
-    - [ ] 1.Usuário adicionar cidade.
-    - [ ] 2.Usuário adicionar valores na matriz adjacentes.
-    - [ ] 3.Salvar matriz adjacentes.
-    - [ ] 4.Exibir as matrizes (distância ou predecessores).
-    - [ ] 5.Executar o algoritimo?
-    - [ ] 6.Salvar os resultados em arquivo .txt (distância e predecessores).
-    - [ ] 7.Mostrar menor caminho entre dois municípios, após execução do algoritimo
+   - [ ] 1.Usuário adicionar cidade.
+   - [ ] 2.Usuário adicionar valores na matriz adjacentes.
+   - [ ] 3.Salvar matriz adjacentes.
+   - [ ] 4.Exibir as matrizes (distância ou predecessores).
+   - [ ] 5.Executar o algoritimo?
+   - [ ] 6.Salvar os resultados em arquivo .txt (distância e predecessores).
+   - [ ] 7.Mostrar menor caminho entre dois municípios, após execução do algoritimo
 
 ## 📁 Estrutura do Repositório
   `main.c`: arquivo principal para executar o programa, irá ter todas as funções.
