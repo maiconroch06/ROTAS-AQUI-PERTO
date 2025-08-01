@@ -4,6 +4,8 @@
 
 #define MAXCHAR 100
 
+// amazenar quantidade de cidades, os nomes e a matriz para o programa executar
+
 int main() {
     FILE *arquivo;
     char linha[MAXCHAR];
@@ -15,15 +17,15 @@ int main() {
     // Lê a primeira linha
         if (fgets(linha, MAXCHAR, arquivo) != NULL) {
             n_cidades = atoi(linha);
-            printf("Quantidade de cidades: %i\n\n", n_cidades);
+            printf("\n - Quantidade de cidades: %i\n\n", n_cidades);
         }
     }
 
     // Lê nomes das cidades
     for (int i = 0; i < n_cidades; i++) {
         if (fgets(linha, MAXCHAR, arquivo) != NULL) {
-            linha[strcspn(linha, "\n")] = 0;  // remove o \n
-            printf("Cidade %02d: %s\n", i + 1, linha);
+            //linha[strcspn(linha, "\n")] = 0;  // remove o \n
+            printf(" > Cidade [%02d]: %s", i + 1, linha);
         }
     }//*/
 

@@ -1,8 +1,11 @@
+// Esse arquivo foi da aula
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
-{
+int main(void){
+
+
     FILE *arquivo = NULL; // ponteiro nulo
 
     arquivo = fopen("teste_escrita.txt", "w");
@@ -11,8 +14,7 @@ int main(void)
     int n_cidades = 5;
 
     //entrada de dados
-    if (arquivo != NULL)
-    {
+    if (arquivo != NULL){
         printf(" ** Arquivo aberto com sucesso!");
         // operacoes
         fprintf(arquivo, "%s", "Meu primeiro arquivo de texto");
@@ -20,8 +22,7 @@ int main(void)
 
         char cidades[][40] = {"Serrinha", "Monte Alegre", "Nova Cruz", "Montanhas", "Santo Antonio"};
 
-        for (int i = 0; i < n_cidades; i++)
-        {
+        for (int i = 0; i < n_cidades; i++){
             fprintf(arquivo, "\n%s", cidades[i]);
         }
 
