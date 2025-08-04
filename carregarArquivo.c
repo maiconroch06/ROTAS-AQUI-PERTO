@@ -1,10 +1,11 @@
 #include <windows.h>
 #include <commdlg.h>
 #include <stdio.h>
-#include <stlib.h>
+#include <stdlib.h>
 
-int main() {
-    char filename[MAX_PATH] = "";
+
+FILE carregarArquivo(FILE * arquivo) {
+    char filename[MAX_PATH] = "r";
 
     OPENFILENAME ofn = {0};
     ofn.lStructSize = sizeof(ofn);
@@ -18,7 +19,7 @@ int main() {
         printf("Arquivo selecionado: %s\n", filename);
         FILE * arquivo = NULL;
 
-        arquivo = fopen("C:/Users/20251134040027/Documents/MyProjects/IFRN-TADS-Material-C/3-avaliacoes/avaliacao-02/cidades-cadastradas/test-escrita.txt","w");
+        arquivo = fopen("C:/Users/20251134040027/Documents/GitHub/ROTAS-AQUI-PERTO/cidades.txt","w");
 
         if (arquivo != NULL){
             printf("\n * Arquivo aberto com sucesso!");
@@ -32,5 +33,5 @@ int main() {
         printf("Nenhum arquivo selecionado.\n");
     }
 
-    return 0;
+    return *arquivo;
 }

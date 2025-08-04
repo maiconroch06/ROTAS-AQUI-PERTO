@@ -19,15 +19,45 @@ int main() {
             n_cidades = atoi(linha);
             printf("\n - Quantidade de cidades: %i\n\n", n_cidades);
         }
+
+
+        
     }
 
-    // Lê nomes das cidades
+    char nomes_cidades[n_cidades][MAXCHAR];
+
+    // Amazena nomes das cidades
+    for (int i = 0; i < n_cidades; i++) {
+        if (fgets(linha, MAXCHAR, arquivo) != NULL) {
+            //linha[strcspn(linha, "\n")] = 0;  // remove o \n
+            for (int j = 0; j < n_cidades; j++)
+            {
+                nomes_cidades[i] = linha;
+            }
+            
+        }
+    }//*/
+
+
+    for (int i = 0; i < n_cidades; i++)
+    {
+        for (int j = 0; j < n_cidades; j++)
+        {
+            pitinf(" %s ", nomes_cidades[i][j]);
+        }
+
+        
+    }
+    
+
+    /*/ Lê nomes das cidades
     for (int i = 0; i < n_cidades; i++) {
         if (fgets(linha, MAXCHAR, arquivo) != NULL) {
             //linha[strcspn(linha, "\n")] = 0;  // remove o \n
             printf(" > Cidade [%02d]: %s", i + 1, linha);
         }
     }//*/
+
 
     fclose(arquivo);
     return 0;

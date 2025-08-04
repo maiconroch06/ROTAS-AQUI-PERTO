@@ -61,7 +61,7 @@ int main(void) {
         case 2:
             /* code */
             break;
-        case 3: {
+        case 3: 
             int voltar = -1;
             do {
                 printf("\n =========== MATRIZES ===========");
