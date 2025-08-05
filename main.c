@@ -7,17 +7,18 @@ int main(void) {
 /* 
 [1] Adicionar Cidades
  > Carregar Arquivo
+ | *Ler quantidade de cidades e amazenar*
+ | | *Ler nomes de cidades e amazenar*
+ | | | *Ler matriz de adjacentes e amazenar*
+ | | | | > Salvar Resultado em um Arquivo [- - - Expecifique local? - - -]
  > Manualmente
  | | > Quantas Cidades?
  | | | > Adicionar valores da distancia de uma cidades para outra
- | | | | - - - - *Exibir Tabela que o Usuario adicionou os valores*
+ | | | | - - *Exibir Tabela que o Usuario adicionou os valores* - -
  | | | | > Deseja Confirmar Valores? (Alterar[2] ou Confirmar[1] ou Cancelar[0])?
  | | | | Se [1] : (Exibi tabela para editar)
  | | | | Se [2] : (Voltar para menu principal)
  | | | | Se [0] : (Voltar para o menu no estado inicial)
- 
- - organizar onde fica essa opção aki: 
-    | > Salvar Resultado [- - - Em outro arquivo - - -]
 
  = = = *verificador* = = =
 
@@ -25,6 +26,7 @@ int main(void) {
  | > Matriz Adjacentes
  | > Matriz Distancias Minimas
  | > Matriz de Prodecessores
+ | > Salvar Resultado em um Arquivo [- - - Expecifique local? - - -]
  | > Voltar
 [3] Calcular Rota
  | > Inicio e
