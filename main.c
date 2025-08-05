@@ -1,23 +1,25 @@
-// esse aqui vai ser o menu
-
-/*
-========= ROTAS-AQUI-PERTO =========
-> Nome cidade:
-> Distancia:
-> 
-
-*/
-
 #include <stdio.h>
 #include <windows.h>
 
 int main(void) {
-    int escolha = 1;
-
+    int escolha;
 
 /*
- 1.1.Usuário adicionar cidade.
- 1.2.Usuário adicionar valores na matriz adjacentes.
+[1] Cadastro cidade:
+ > Exibir listas das cidades
+ | > Exibir Matrizes:
+ | | > Matriz Adjacentes
+ | | > Matriz Distancias Minimas
+ | | > Matriz de Prodecessores
+ | | > Voltar
+ > Adicionar Cidades
+ | > Manualmente
+ | > Carregar Arquivo
+ |  > ?Quantas?
+ |   > Usuário adicionar valores na matriz adjacentes. (de alguma forma tem que ter as 3 matrizes)
+
+[2] :
+
  3.Salvar matriz adjacentes.
  4.Exibir as matrizes (distância ou predecessores).
  5.Executar o algoritimo?
@@ -27,8 +29,8 @@ int main(void) {
     do {
         printf("\n ============= ROTAS-AQUI-PERTO =============");
         printf("\n > [1] Cadastrar cidades");
-        printf("\n > [2] Inserir Valores na Matriz de Adjacencias");
-        printf("\n > [3] Exibir Matrizes");
+        printf("\n > [2] ");
+        printf("\n > [3] ");
         printf("\n > [0] Sair");
         printf("\n ============================================\n");
         scanf(" Opcao: %i",&escolha);
@@ -58,10 +60,8 @@ int main(void) {
                 break;
 
             }while(repetir != 0 && repetir != 1 && repetir != 2);
-        case 2:
-            /* code */
-            break;
-        case 3: 
+        
+        case 2: 
             int voltar = -1;
             do {
                 printf("\n =========== MATRIZES ===========");
@@ -93,6 +93,9 @@ int main(void) {
 
             break;
 
+        case 3:
+                    /* code */
+                    break;
         case 4:
             /* code */
             break;
