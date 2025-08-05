@@ -2,36 +2,41 @@
 #include <windows.h>
 
 int main(void) {
-    int escolha;
+    int escolha, verificador;
 
-/*
-[1] Cadastro cidade:
- > Exibir listas das cidades
- | > Exibir Matrizes:
- | | > Matriz Adjacentes
- | | > Matriz Distancias Minimas
- | | > Matriz de Prodecessores
- | | > Voltar
- > Adicionar Cidades
- | > Manualmente
- | > Carregar Arquivo
- |  > ?Quantas?
- |   > Usuário adicionar valores na matriz adjacentes. (de alguma forma tem que ter as 3 matrizes)
+/* 
+[1] Adicionar Cidades
+ > Carregar Arquivo
+ > Manualmente
+ | | > Quantas Cidades?
+ | | | > Adicionar valores da distancia de uma cidades para outra
+ | | | | - - - - *Exibir Tabela que o Usuario adicionou os valores*
+ | | | | > Deseja Confirmar Valores? (Alterar[2] ou Confirmar[1] ou Cancelar[0])?
+ | | | | Se [1] : (Exibi tabela para editar)
+ | | | | Se [2] : (Voltar para menu principal)
+ | | | | Se [0] : (Voltar para o menu no estado inicial)
+ 
+ - organizar onde fica essa opção aki: 
+    | > Salvar Resultado [- - - Em outro arquivo - - -]
 
-[2] :
+ = = = *verificador* = = =
 
- 3.Salvar matriz adjacentes.
- 4.Exibir as matrizes (distância ou predecessores).
- 5.Executar o algoritimo?
- 6.Salvar os resultados em arquivo .txt (distância e predecessores).
- 7.Mostrar menor caminho entre dois municípios, após execução do algoritimo
+[2] Exibir Matrizes
+ | > Matriz Adjacentes
+ | > Matriz Distancias Minimas
+ | > Matriz de Prodecessores
+ | > Voltar
+[3] Calcular Rota
+ | > Inicio e
+ | | > Destino
+ - - - - [Exibir Menor Rota] - - - -
 */
+
     do {
         printf("\n ============= ROTAS-AQUI-PERTO =============");
-        printf("\n > [1] Cadastrar cidades");
-        printf("\n > [2] ");
-        printf("\n > [3] ");
-        printf("\n > [0] Sair");
+        printf("\n > [1] Adicionar Arquivo");
+        printf("\n > [2] Exibir Matrizes");
+        printf("\n > [3] Calcular Rota");
         printf("\n ============================================\n");
         scanf(" Opcao: %i",&escolha);
 

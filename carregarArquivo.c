@@ -4,22 +4,23 @@
 #include <stdlib.h>
 
 
-FILE carregarArquivo(FILE * arquivo) {
+
+void main(void) {
     char filename[MAX_PATH] = "r";
 
-    OPENFILENAME ofn = {0};
+/*    OPENFILENAME ofn = {0};
     ofn.lStructSize = sizeof(ofn);
     ofn.lpstrFile = filename;
     ofn.nMaxFile = MAX_PATH;
     ofn.lpstrFilter = "Text Files\0*.txt\0All Files\0*.*\0";
     ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
     ofn.lpstrTitle = "Selecione um arquivo";
-
-    if (GetOpenFileName(&ofn)) {
+*/
+ /*   if (GetOpenFileName(&ofn)) {
         printf("Arquivo selecionado: %s\n", filename);
-        FILE * arquivo = NULL;
+        */FILE * arquivo = NULL;
 
-        arquivo = fopen("C:/Users/20251134040027/Documents/GitHub/ROTAS-AQUI-PERTO/cidades.txt","w");
+        arquivo = fopen("C:/Users/20251134040027/Documents/GitHub/ROTAS-AQUI-PERTO/Banco/cidades.txt","w");
 
         if (arquivo != NULL){
             printf("\n * Arquivo aberto com sucesso!");
@@ -29,9 +30,9 @@ FILE carregarArquivo(FILE * arquivo) {
             fclose(arquivo);
         }
 
-    } else {
+    /*} else {
         printf("Nenhum arquivo selecionado.\n");
-    }
+    }*/
 
     return *arquivo;
 }

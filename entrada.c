@@ -8,10 +8,14 @@
 
 int main() {
     FILE *arquivo;
+    char origem[500];
     char linha[MAXCHAR];
     int n_cidades = 0;
+    
+    printf(" Qual a origem do arquivo: ");
+    scanf("%s", origem);
 
-    arquivo = fopen("cidades.txt", "r");
+    arquivo = fopen("origem.txt", "r");
     if (arquivo != NULL) {
 
     // Lê a primeira linha
@@ -19,9 +23,6 @@ int main() {
             n_cidades = atoi(linha);
             printf("\n - Quantidade de cidades: %i\n\n", n_cidades);
         }
-
-
-        
     }
 
     char nomes_cidades[n_cidades][MAXCHAR];
@@ -30,8 +31,7 @@ int main() {
     for (int i = 0; i < n_cidades; i++) {
         if (fgets(linha, MAXCHAR, arquivo) != NULL) {
             //linha[strcspn(linha, "\n")] = 0;  // remove o \n
-            for (int j = 0; j < n_cidades; j++)
-            {
+            for (int j = 0; j < n_cidades; j++) {
                 nomes_cidades[i] = linha;
             }
             
