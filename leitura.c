@@ -5,11 +5,9 @@
 
 int main(void){
 
-
     FILE *arquivo = NULL; // ponteiro nulo
 
     arquivo = fopen("C:/Users/20251134040027/Documents/GitHub/ROTAS-AQUI-PERTO/cidades.txt","w");
-
 
     int n_cidades = 5;
 
