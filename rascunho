@@ -12,6 +12,9 @@
  | | > Quantas Cidades?
  | | | > Adicionar valores da distancia de uma cidades para outra
  | | | | - - *Exibir Tabela que o Usuario adicionou os valores* - -
+
+
+ 
  | | | | > Deseja Confirmar Valores? (Alterar[2] ou Confirmar[1] ou Cancelar[0])?
  | | | | Se [1] : (Exibi tabela para editar)
  | | | | Se [2] : (Voltar para menu principal)

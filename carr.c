@@ -1,42 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <windows.h>
 
-#define MAXCHAR 100
+#define MAXCHAR 1000
 
-// amazenar quantidade de cidades, os nomes e a matriz para o programa executar
-void CarregarArquivo();
-//void CadastroManual();
-
-int main(){
-    int escolha;
-    printf("\n ========== CADASTRO-DE-CIDADES ==========");
-    printf("\n > [1] Carregar Arquivo");
-    printf("\n > [2] Adicionar Manualmente");
-    printf("\n > [0] Voltar");
-    printf("\n =========================================\n");
-    printf(" -> Opcao: %i"); 
-    scanf("%i",&escolha); 
-
-    switch (escolha){
-    case 1:
-        CarregarArquivo();
-        break;
-    case 2:
-        //CadastroManual();
-        break;
-
-    default:
-        printf("\n #ERRO: sua escolha é invalida, tente novamente...");
-        system("pause");
-        break;
-    }
-
-    return 0;
-}
-
-void CarregarArquivo(){
+int main(void){
     FILE *arquivo;
 
     char origem[500];
@@ -75,14 +43,28 @@ void CarregarArquivo(){
             }
     
         }
+
+        printf("\n N-Cidades: %i",n_cidades);
+
+        for (int i = 0; i < n_cidades; i++){
+            printf("%i. %s\n",i,nomes_cidades[i]);
+        }
+
+        printf("\n");
+
+        for (int i = 0; i < n_cidades; i++)
+        {
+            for (int j = 0; j < n_cidades; j++)
+            {
+                printf(" %.2f ",A[i][j]);
+            }
+            printf("\n");
+        }
+        
             
     fclose(arquivo);
+    } else {
+        printf(" foi nao");
     }
-
-}
-
-/*void CadastroManual(){
-
     return 0;
-
-}*/
+}
