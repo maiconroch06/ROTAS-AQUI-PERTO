@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include <windows.h>
+#include <stdlib.h>
+#include "cadastro.c"
 
 int main(void) {
-    int escolha, verificador;
+    int escolha;
 
     do {
         printf("\n ============= ROTAS-AQUI-PERTO =============");
@@ -17,21 +18,11 @@ int main(void) {
 
         switch (escolha){
         case 1:
-            int repetir;
-            do{
-                printf("\n ========== CADASTRO-DE-CIDADES ==========");
-                printf("\n > [1] Carregar Arquivo");
-                printf("\n > [2] Adicionar Manualmente");
-                printf("\n > [0] Voltar");
-                printf("\n =========================================\n");
-                scanf(" Opcao: %i",&repetir); 
-
-            }while(repetir != 0 && repetir != 1 && repetir != 2);
-            
+            // (chamar aquivo cadastro)
+            CadastroCidades();
             break;
 
-        case 2:
-            int repetir;
+        /*case 2:
             do {
                 printf("\n =========== EXIBIR-MATRIZES ===========");
                 printf("\n > [1] Matriz Adjacencias");
@@ -40,30 +31,29 @@ int main(void) {
                 printf("\n > [0] Voltar");
                 printf("\n ================================");
                 printf("\n Opcao: ");
-                scanf("%d", &repetir);
+                scanf("%d", &escolha);
 
-            } while (repetir != 0 && repetir != 1 && repetir != 2 && repetir != 3);
+            } while (escolha != 0 && escolha != 1 && escolha != 2 && escolha != 3);
 
             break;
 
         case 3: 
-            int repetir;
             do {
                 printf("\n =========== CALCULAR-ROTA ===========");
                 printf("\n > Seu Ponto de Partida: ");
-                scanf("%i", &repetir);
+                scanf("%i", &escolha);
 
                 printf("\n > Seu Destino: ");
-                scanf("%i", &repetir);
+                scanf("%i", &escolha);
 
                 printf("\n > [0] Cancelar");
                 printf("\n ================================");
                 printf("\n Opcao: ");
-                scanf("%i", &repetir);
+                scanf("%i", &escolha);
 
-            } while (repetir != 0 && repetir != 1 && repetir != 2 && repetir != 3);
+            } while (escolha != 0 && escolha != 1 && escolha != 2 && escolha != 3);
 
-            break;
+            break;*/
 
         default:
             break;
@@ -71,7 +61,7 @@ int main(void) {
         
         system("cls");
 
-    } while (escolha != 0);
+    } while (1);
 
     return 0;
 }
