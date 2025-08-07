@@ -1,27 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "cadastro.c"
+#include "cadastro.h"
 
 int main(void) {
     int escolha;
 
     do {
+        system("cls");
         printf("\n ============= ROTAS-AQUI-PERTO =============");
         printf("\n > [1] Adicionar Cidades");
         printf("\n > [2] Exibir Matrizes");
         printf("\n > [3] Calcular Rota");
         printf("\n > [0] Sair do Programa");
         printf("\n ============================================\n");
-        scanf(" Opcao: %i",&escolha);
-
-        system("cls");
-
+        printf(" Opcao: ");
+        scanf("%i",&escolha);
         switch (escolha){
+        
         case 1:
             // (chamar aquivo cadastro)
             CadastroCidades();
             break;
-
+            
         /*case 2:
             do {
                 printf("\n =========== EXIBIR-MATRIZES ===========");
@@ -33,7 +33,7 @@ int main(void) {
                 printf("\n Opcao: ");
                 scanf("%d", &escolha);
 
-            } while (escolha != 0 && escolha != 1 && escolha != 2 && escolha != 3);
+            } while (1);
 
             break;
 
@@ -50,12 +50,17 @@ int main(void) {
                 printf("\n ================================");
                 printf("\n Opcao: ");
                 scanf("%i", &escolha);
-
-            } while (escolha != 0 && escolha != 1 && escolha != 2 && escolha != 3);
-
-            break;*/
-
+                
+                } while (1);
+                
+                break;*/
+                
+        case 0:
+            // saindo
+            return 0;
+            
         default:
+            printf(" ERRO: escolha fora do escopo");
             break;
         }
         
@@ -63,5 +68,4 @@ int main(void) {
 
     } while (1);
 
-    return 0;
 }
