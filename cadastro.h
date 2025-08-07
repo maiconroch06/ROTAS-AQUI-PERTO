@@ -1,6 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
+/*#include <stdio.h>
+#include <stdlib.h>*/
 #include <string.h>
+#include "matriz.h"
 
 #define MAXCHAR 1000
 
@@ -8,7 +9,7 @@
 int CarregarArquivo();
 //void CadastroManual();
 
-int CadastroCidades(){
+int CadastroCidades(matrizAdj *matrizAdj){
     int escolha;
 
     system("cls");
@@ -25,7 +26,7 @@ int CadastroCidades(){
         //CadastroManual();
         break;
     case 2:
-        CarregarArquivo();
+        CarregarArquivo(matrizAdj);
         break;
     case 0:
         break;
@@ -38,41 +39,39 @@ int CadastroCidades(){
 
     return 0;
 }
-
-/*void CadastroManual(){
+void CadastroManual(){
 
     return 0;
 
-}*/
+}
 
-int CarregarArquivo(){
-    FILE *arquivo;
+int CarregarArquivo(matrizAdj *matrizAdj){
+    FILE *arquivo = NULL;
     
     do{
         system("cls");
+        printf("\n - - - CADASTRO AUTOMATICO - - -\n");
         char origem[500];
         printf("\n > Origem do arquivo: ");
         scanf(" %[^\n]", origem);
         
         arquivo = fopen(origem, "r");
         
-        int n_cidades;
         char linha[MAXCHAR];
         
         if (arquivo != NULL) {
             
             // Amazena - Numero de cidades
             if (fgets(linha, MAXCHAR, arquivo) != NULL) {
-                n_cidades = atoi(linha);
+                matrizAdj->n = atoi(linha);
             }
-                
-            char nomes_cidades[n_cidades][MAXCHAR];
-            float A[n_cidades][n_cidades];
+            
+            int n_cidades = matrizAdj->n;
 
             // Amazena - Nomes das cidades
             for (int i = 0; i < n_cidades; i++) {
                 if (fgets(linha, MAXCHAR, arquivo) != NULL) {
-                    strcpy(nomes_cidades[i],linha);
+                    strcpy(matrizAdj->nomes[i],linha);
                 }
             }
             
@@ -83,7 +82,7 @@ int CarregarArquivo(){
                 char *token = strtok(linha, ";");
                 
                 for (int j = 0; j < n_cidades; j++){
-                    A[i][j] = atof(token);
+                    matrizAdj->matriz[i][j] = atof(token);
                     token = strtok(NULL, ";");
                 }
             }
@@ -95,15 +94,15 @@ int CarregarArquivo(){
             // Exibição - Lista de noomes de cidades
             printf("\n > LISTA-DE-CIDADES:\n"); 
             for (int i = 0; i < n_cidades; i++){
-                printf(" %02.d. %s",i+1,nomes_cidades[i]);
+                printf(" %02d. %s",i+1,matrizAdj->nomes[i]);
             }
             
             // Exibição - Matriz de Adjacentes
             printf("\n > MATRIZ-DE-ADJACENTES:\n\n");
             for (int i = 0; i < n_cidades; i++){
-                printf(" | ");
+                printf(" |");
                 for (int j = 0; j < n_cidades; j++){
-                    printf(" %7.2f ",A[i][j]);
+                    printf("%7.2f",matrizAdj->matriz[i][j]);
                     if(j < n_cidades - 1){
                         printf("|");
                     }
@@ -132,9 +131,9 @@ int CarregarArquivo(){
             switch(escolhas){
             case 1:
                 system("cls");
-
                 break;
-                case 0:
+
+            case 0:
                 system("cls");
                 printf("\n* Saindo...\n");
                 return 1;
