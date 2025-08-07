@@ -1,13 +1,11 @@
-/*#include <stdio.h>
-#include <stdlib.h>*/
 #include <string.h>
 #include "matriz.h"
 
 #define MAXCHAR 1000
 
 // amazenar quantidade de cidades, os nomes e a matriz para o programa executar
-int CarregarArquivo();
 //void CadastroManual();
+int CarregarArquivo();
 
 int CadastroCidades(matrizAdj *matrizAdj){
     int escolha;
@@ -39,11 +37,12 @@ int CadastroCidades(matrizAdj *matrizAdj){
 
     return 0;
 }
-void CadastroManual(){
+
+/*void CadastroManual(){
 
     return 0;
 
-}
+}*/
 
 int CarregarArquivo(matrizAdj *matrizAdj){
     FILE *arquivo = NULL;
