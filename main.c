@@ -5,6 +5,7 @@
 
 int main(void) {
     int escolha;
+    matrizAdj matrizADJ;
 
     do {
         system("cls");
@@ -30,7 +31,8 @@ int main(void) {
             }
             break;
             
-        /*case 2:
+        //*/
+        case 2:
             do {
                 printf("\n =========== EXIBIR-MATRIZES ===========");
                 printf("\n > [1] Matriz Adjacencias");
@@ -61,7 +63,7 @@ int main(void) {
                 
                 } while (1);
                 
-                break;*/
+                break;//*/
                 
         case 0:
             // saindo
