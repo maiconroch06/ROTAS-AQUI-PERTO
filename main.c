@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "cadastro.h"
 #include "matriz.h"
+#include "exibir.h"
 
 int main(void) {
     int escolha;
@@ -22,28 +23,19 @@ int main(void) {
         case 1:
             // (chamar aquivo cadastro)
             CadastroCidades(&matrizADJ);
-
-            for(int i = 0; i < matrizADJ.n; i++){
+            
+            /*for(int i = 0; i < matrizADJ.n; i++){
                 for (int j = 0; j < matrizADJ.n; j++) {
                     printf("|%.2lf|", matrizADJ.matriz[i][j]);
                 }
                 printf("\n");
-            }
+            }*/
             break;
             
         //*/
         case 2:
-            do {
-                printf("\n =========== EXIBIR-MATRIZES ===========");
-                printf("\n > [1] Matriz Adjacencias");
-                printf("\n > [2] Matriz Distancias Minimas");
-                printf("\n > [3] Matriz de Predecessores");
-                printf("\n > [0] Voltar");
-                printf("\n ================================");
-                printf("\n Opcao: ");
-                scanf("%d", &escolha);
-
-            } while (1);
+            // (chamar aquivo exibir)
+            ExibirMatrizes(&matrizADJ);
 
             break;
 

@@ -9,5 +9,9 @@ typedef struct {
 
 // Declara funções que usam a struct
 int CarregarArquivo(matrizAdj *matriz);
+int CadastroManual(matrizAdj *matriz);
+int ExibirADJ(matrizAdj *matrizAdj);
+/*int ExibirDM(matrizAdj *matrizAdj);
+int ExibirPDC(matrizAdj *matrizAdj);*/
 
 #endif
