@@ -6,7 +6,6 @@
 int ExibirADJ();
 //int ExibirDM();
 //int ExibirPDC();
-matrizAdj matrizADJ;
 
 int ExibirMatrizes(matrizAdj *matrizAdj) {
     int escolha;

@@ -3,7 +3,6 @@
 #include "salvar.h"
 
 #define MAXCHAR 1000
-matrizAdj matrizADJ;
 
 // amazenar quantidade de cidades, os nomes e a matriz para o programa executar
 int CadastroManual();
