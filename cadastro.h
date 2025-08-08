@@ -1,10 +1,11 @@
 #include <string.h>
 #include "matriz.h"
+#include "salvar.h"
 
 #define MAXCHAR 1000
 
 // amazenar quantidade de cidades, os nomes e a matriz para o programa executar
-//void CadastroManual();
+int CadastroManual();
 int CarregarArquivo();
 
 int CadastroCidades(matrizAdj *matrizAdj){
@@ -21,7 +22,7 @@ int CadastroCidades(matrizAdj *matrizAdj){
 
     switch (escolha){
     case 1:
-        //CadastroManual();
+        CadastroManual();
         break;
     case 2:
         CarregarArquivo(matrizAdj);
@@ -38,11 +39,99 @@ int CadastroCidades(matrizAdj *matrizAdj){
     return 0;
 }
 
-/*void CadastroManual(){
+int CadastroManual(){
+    int n_cidades;
 
-    return 0;
+    do{
+        system("cls");
+        printf("\n ============ CADASTRO MANUAL ============");
+        printf("\n > Informe o Numero dos Municipios: ");
+        scanf("%i", &n_cidades);
 
-}*/
+        float A[100][100];
+        char cidades[100][1000];
+
+// TEM QUE LIMPAR O BUFFER AQUI
+        int c;
+        while ((c = getchar()) != '\n' && c != EOF) {}
+
+        // Inicio de cadastro de nomes das cidades
+        printf(" > Nomes dos Municipios:\n");
+        
+        // Cadastro de nomes das cidades
+        for(int i = 0; i < n_cidades; i++){
+            printf("  %02d.", i + 1);
+            fgets(cidades[i], sizeof(cidades), stdin);
+
+            // Remove o '\n' se estiver presente
+            cidades[i][strcspn(cidades[i], "\n")] = '\0';
+        }
+
+        printf(" > Distancia Entre dos Municipios:\n");
+
+        // Cadastro das distâncias entre cidades
+        for(int i = 0; i < n_cidades; i++){
+            for(int j = i; j < n_cidades; j++){
+                if(i==j){
+                    A[i][j] = 0;
+                } else {
+                    printf(" %02d. De %s para %s: ", i + 1, cidades[i], cidades[j]);
+                    scanf("%f", &A[i][j]);
+                    A[j][i] = A[i][j];
+                }
+            }
+        }
+
+        system("cls");
+        printf("\n");
+
+        //================================ GERAR RESULTADO =======================================
+        //                TALVEZ AQUI TENHA QUE TER A EXECUÇÃO DO ALGORITMO
+        //=================================== EXIBIÇÃO ===========================================
+
+        // Exibição - Lista de nomes de cidades
+        printf("\n > LISTAS-DE-CIDADES:\n"); 
+        for (int i = 0; i < n_cidades; i++){
+            printf(" %02d. %s\n",i+1,cidades[i]);
+        }
+
+        // Exibição - Matriz de Adjacentes
+        printf("\n > MATRIZ-DE-ADJACENTES:\n\n");
+        for(int i = 0; i < n_cidades; i++){
+            printf(" |");
+            for(int j = 0; j < n_cidades; j++){
+                printf(" %7.2f ", A[i][j]);
+                if(j < (n_cidades - 1)){
+                    printf("|");
+                }
+            }
+            printf(" |\n");
+        }
+        printf("\n");
+
+        //Confirmação
+        int escolhas;
+        printf("\n ====== DESEJA CONFIRMAR ESSES VALORES? ======");
+        printf("\n > [1] Confirmar > [2] Alterar > [0] Cancelar");
+        printf("\n =============================================");
+        printf("\n -> Opcao: ");
+        scanf("%i", &escolhas);
+
+        switch(escolhas){
+            case 1:
+                salvar(n_cidades, cidades, A); // Passa dados para salvar
+                return 0; //?????????? n sei se tem mais coisa
+
+                break;
+            case 2:
+                printf("\n* Alterar Valores!");
+                break;
+            case 0:
+                printf("\n* Valores Cancelados!");
+                return 0;
+        }
+    }while(1);
+}
 
 int CarregarArquivo(matrizAdj *matrizAdj){
     FILE *arquivo = NULL;
@@ -140,3 +229,4 @@ int CarregarArquivo(matrizAdj *matrizAdj){
         }
     }while (1);
 }
+
