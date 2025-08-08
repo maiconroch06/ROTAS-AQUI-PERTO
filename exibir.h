@@ -23,8 +23,8 @@ int ExibirMatrizes(matrizAdj *matrizAdj) {
 
         switch (escolha){
         case 1:
-            ExibirADJ(&matrizADJ);
-            SalvarDadosIniciais(&matrizADJ);
+            ExibirADJ(matrizADJ);
+            SalvarDadosIniciais(matrizADJ);
             return 0;
             break;
         /*case 2:
