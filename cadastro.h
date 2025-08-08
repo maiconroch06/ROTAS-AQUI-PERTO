@@ -44,7 +44,7 @@ int CadastroManual(){
 
     do{
         system("cls");
-        printf("\n ============ CADASTRO MANUAL ============");
+        printf("\n ============ CADASTRO-MANUAL ============");
         printf("\n > Informe o Numero dos Municipios: ");
         scanf("%i", &n_cidades);
 
@@ -75,7 +75,7 @@ int CadastroManual(){
                 if(i==j){
                     A[i][j] = 0;
                 } else {
-                    printf(" %02d. De %s para %s: ", i + 1, cidades[i], cidades[j]);
+                    printf("  %02d.De '%s' para '%s': ", j + 1, cidades[i], cidades[j]);
                     scanf("%f", &A[i][j]);
                     A[j][i] = A[i][j];
                 }
@@ -92,7 +92,7 @@ int CadastroManual(){
         // Exibição - Lista de nomes de cidades
         printf("\n > LISTAS-DE-CIDADES:\n"); 
         for (int i = 0; i < n_cidades; i++){
-            printf(" %02d. %s\n",i+1,cidades[i]);
+            printf("  %02d.%s\n",i+1,cidades[i]);
         }
 
         // Exibição - Matriz de Adjacentes

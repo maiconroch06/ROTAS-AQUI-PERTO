@@ -9,8 +9,7 @@ void salvar(int n_cidades, char cidades[][1000], float A[][100]){
     int escolhas;
     system("cls");
     printf("\n === SALVAR DADOS INICIAIS EM ARQUIVO? ====");
-    printf("\n > [1] Sim");
-    printf("\n > [0] Nao");
+    printf("\n > [1] Sim > [0] Nao");
     printf("\n ===========================================");
     printf("\n Opcao: ");
     scanf("%i", &escolhas);
