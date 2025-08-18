@@ -3,15 +3,14 @@
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-Este atual repositorio visa desenvolver um programa para determinar as rotas mais eficientes para cada par de municípios, com o propósito de minimizar o tempo de viagem. 
+Este atual repositório visa desenvolver um programa para determinar as rotas mais eficientes para cada par de municípios, com o propósito de minimizar o tempo de viagem. 
 
 ## 🎯 Este repositório foi criado com o objetivo de
 
-- Concluir a segunda e última avaliação do curso;
-- Desenvolver um programa em C para ;
-- Compartilhar este repositorio com colegas da equipe para o trabalho avaliativo;
-- Facilitar o acesso para desenvolvimento e revisão do codigo;
-- Este repositorio faz parte de outro repositorio principal "`IFRN-TADS-Meterial-C/`". 
+- Concluir a segunda e última avaliação da disciplina de Programação de Computadores;
+- Desenvolver um programa em C de calcular a menor rota entre cidades;
+- Separar este repositório do repositório principal "`IFRN-TADS-Meterial-C`". 
+- Compartilhar este repositório com colegas da equipe para facilitar no desenvolvimento do codigo.
 
 ## 📁 Estrutura do Repositório
 
@@ -20,9 +19,9 @@ Este atual repositorio visa desenvolver um programa para determinar as rotas mai
   `prototipos.h/`: Arquivo onde contém todas as funções, como:
    - Cadastramento manual e carregamento de arquivo `.txt` das cidades;
    - Executar o algoritimo e amazenar os resultados;
-   - Exibição das matrizes;
+   - Exibição de todas as matrizes obtidas no codigo;
    - Calcular menor rota de uma cidade de origem para cidade de destino;
-   - Salvar os arquivos iniciais e de resultados em formato `.txt`.
+   - Salvar os arquivos iniciais e/ou de resultados em formato `.txt`.
 
 ## 🤝 Contribuição
 
