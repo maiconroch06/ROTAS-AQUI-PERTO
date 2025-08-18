@@ -1,17 +1,19 @@
-# IFRN-TADS-Material-C
+# ROTAS-AQUI-PERTO
 
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-Este repositorio parte de outro repositorio principal da disciplina: `IFRN-TADS-Meterial-C`, que visa desenvolver em grupo, um projeto para se calcular a menor rota de uma cidade para outra. 
+Este repositorio parte de outro repositorio principal da disciplina: `IFRN-TADS-Meterial-C/`, que visa desenvolver em grupo, um projeto para se calcular a menor rota de uma cidade para outra. 
 
-## 🎯 Este repositório foi criado com o objetivo de:
+## 🎯 Este repositório foi criado com o objetivo de
 
 - Concluir a segunda e última avaliação do curso;
+- Desenvolver um programa em C para ;
 - Compartilhar este repositorio com colegas da equipe para o trabalho avaliativo;
 - Facilitar o acesso para desenvolvimento e revisão do codigo;
 
 ## 📁 Estrutura do Repositório
+
   `main.c/`: Arquivo principal para ser executado.
 
   `prototipos.h/`: Arquivo onde contém todas as funções, como:
@@ -27,4 +29,4 @@ Contribuições são bem-vindas! Se quiser sugerir melhorias, correções ou adi
 
 ## 👨‍💻 Autores
 
-Este repositório foi criado por [Lucas_Gabriel](https://github.com/), [Maicon_Rocha](https://github.com/maiconroch06) e [Luana](https://github.com/) como parte da segunda avaliativo da disciplina de **Programação de Computadores** do curso de **Analise e desenvolvimento de Sistemas** **(TADS)** no **IFRN - Campus Nova Cruz**.
+Este repositório foi criado por [Lucas Gabriel](https://github.com/Lucasgfln), [Maicon Rocha](https://github.com/maiconroch06) e [Luana Souza](https://github.com/Luana-Souza2) como parte da segunda avaliação da disciplina de **Programação de Computadores** do curso de **Análise e desenvolvimento de Sistemas** **(TADS)** no **IFRN - Campus Nova Cruz**.
