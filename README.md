@@ -1,6 +1,6 @@
 # ROTAS-AQUI-PERTO
 
-![Language](https://img.shields.io/badge/language-C-blue.svg)
+![Linguagem](https://img.shields.io/badge/language-C-blue.svg)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
 Este atual repositório visa desenvolver um programa para determinar as rotas mais eficientes para cada par de municípios, com o propósito de minimizar o tempo de viagem. 
