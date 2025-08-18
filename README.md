@@ -3,7 +3,7 @@
 ![Language](https://img.shields.io/badge/language-C-blue.svg)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-Este repositorio parte de outro repositorio principal da disciplina: `IFRN-TADS-Meterial-C/`, que visa desenvolver em grupo, um projeto para se calcular a menor rota de uma cidade para outra. 
+Este atual repositorio visa desenvolver um programa para determinar as rotas mais eficientes para cada par de municípios, com o propósito de minimizar o tempo de viagem. 
 
 ## 🎯 Este repositório foi criado com o objetivo de
 
@@ -11,6 +11,7 @@ Este repositorio parte de outro repositorio principal da disciplina: `IFRN-TADS-
 - Desenvolver um programa em C para ;
 - Compartilhar este repositorio com colegas da equipe para o trabalho avaliativo;
 - Facilitar o acesso para desenvolvimento e revisão do codigo;
+- Este repositorio faz parte de outro repositorio principal "`IFRN-TADS-Meterial-C/`". 
 
 ## 📁 Estrutura do Repositório
 
