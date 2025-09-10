@@ -14,6 +14,8 @@ int CadastroManual(DadosCidades *cidades){
         scanf("%i", &n_cidades);
         cidades->num_cidades = n_cidades;
 
+        alocar_memoria(cidades);
+
         printf(" > Nomes dos Municipios:\n");
         for (int i = 0; i < n_cidades; i++){
             printf("   %02d. ", i + 1);
@@ -59,9 +61,11 @@ int CadastroManual(DadosCidades *cidades){
                 return 1;
             case 2:
                 printf("\n * Alterar Valores!\n");
+                liberar_memoria(cidades);
                 break; // volta ao loop e recadastra
             case 0:
                 printf("\n * Valores Cancelados!\n");
+                liberar_memoria(cidades);
                 return 0;
             default:
                 printf("\n * Opcao invalida. Tente novamente.\n");

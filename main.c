@@ -15,7 +15,10 @@ int main(void) {
             case 2: ExibirMatrizes(&cidades); break;
             case 3: Salvar(&cidades); break;
             case 4: CalcularRota(&cidades); break;
-            case 0: limparTela(); return 0;
+            case 0:
+                limparTela();
+                liberar_memoria(&cidades);
+                return 0;
             default: break;
         }
 
